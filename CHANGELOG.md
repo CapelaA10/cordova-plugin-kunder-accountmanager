@@ -1,3 +1,8 @@
+# 1.0.4
+## Description
+- Added fix for sdk new export
+- Also fixed some details for the conversion to capacitor
+
 # 1.0.3
 ## Description
 - Add function to remove only user and password for ios keychain

@@ -12,7 +12,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kunder-lab/cordova-plugin-kunder-accountmanager.git"
+    "url": "git+https://github.com/capelaa10/cordova-plugin-kunder-accountmanager.git"
   },
   "keywords": [
     "cordova",
@@ -26,7 +26,7 @@
   "author": "Kunder",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kunder-lab/cordova-plugin-kunder-accountmanager/issues"
+    "url": "https://github.com/capelaa10/cordova-plugin-kunder-accountmanager/issues"
   },
-  "homepage": "https://github.com/kunder-lab/cordova-plugin-kunder-accountmanager#readme"
+  "homepage": "https://github.com/capelaa10/cordova-plugin-kunder-accountmanager#readme"
 }
