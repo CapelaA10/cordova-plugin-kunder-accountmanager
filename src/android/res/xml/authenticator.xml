@@ -2,7 +2,7 @@
 <account-authenticator
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:accountType="here.the.unique.package.identifier"
-    android:icon="@drawable/here_your_icon"
-    android:smallIcon="@drawable/here_your_icon"
+    android:icon="@drawable/acm_icon"
+    android:smallIcon="@drawable/acm_icon"
     android:label="@string/authLabel"/>
 
