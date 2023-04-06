@@ -1,50 +1,49 @@
-<!---
-license: Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
-distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
-to you under the Apache License, Version 2.0 (the
-"License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
+# Using this plugin for capacitor
 
-http://www.apache.org/licenses/LICENSE-2.0
+## Install
+npm install https://github.com/CapelaA10/cordova-plugin-kunder-accountmanager/tree/master 
 
-Unless required by applicable law or agreed to in writing,
-software distributed under the License is distributed on an
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
-specific language governing permissions and limitations
-under the License.
--->
+## Sync
+npx cap sync
 
-# cordova-plugin-kunder-accountmanager
+## angular.json
+- Copy the file "AccountManagerGlobal.js" to "src/assets" in the angular project
+- Add this to the scrips array (both places) the script "AccountManagerGlobal.js"
 
-This cordova plugin enables you to use Android Account Manager and iOS Keychain to manage accounts of one user and share with other applications of the same company (e.g google apps like gmail, youtube, etc).
+## Android
 
-It's possible to moddify this plugins to allow multiple accounts.
+- Start to put a drawable in android res folder with the name "acm_icon" so the plugin can identify what to use in the account manager section
+- Also create a string in the strings.xml file with the name "authLabel" this way the plugin knows the name of the app to show in AccountManager settings in android
+- Add this to the android manifest:
+"            
+<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"></uses-permission>
+<uses-permission android:name="android.permission.GET_ACCOUNTS"></uses-permission>
+<uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+"
+- DO NOT FORGET TO ASK IN RUN TIME FOR THE USER PERMISSION
 
-By default, this plugin cypher the key and message before setting data into Account Manager with AES 256 bits (Android only).
+## iOS
+- TO BE DONE 
 
-## Installation
+## In your TYPESCRIPT files
+- Add at the top of the file function name like:
+"declare var initWithKey: any;"  -> Replace initWithKey the function name you want to use 
+- Use the function in other parts for example:
+"
+ngOnInit() {
+    console.log("done test");
+    initWithKey(
+        "pass",
+        () => {
+            console.log("done");
+        },
+        (message: String) => {
+            console.log("fail");
+        }
+    );
+}
+"
 
-```
-cordova plugin add https://github.com/kunder-lab/cordova-plugin-kunder-accountmanager.git#1.0.1 (the lastest stable version)
-```
-
-## Account Manager settings
-
-You need to add the following settings in your config.xml file for Android Account Manager to work:
-
-```
-<preference name="AccountManagerLabel" value="Your Label Here" />
-<preference name="AccountManagerIconUrl" value="your_icon_url_here.png" />
-<preference name="AccountManagerType" value="your.unique.identifier" />
-```
-
-## Supported Platforms
-
-- Android
-- iOS
 
 ## Methods
 
@@ -72,8 +71,4 @@ You need to add the following settings in your config.xml file for Android Accou
 - removeAccount remove all keychain data from your app.
 - You can not set user data to Account Manager if it doesn't have an account for your identifier.
 - You need to call initWithKey method before other Account Manager method, otherwise it will not work (Android only).
-
-## License
-
-MIT
 
