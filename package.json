@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-kunder-accountmanager",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Use Android Account Manager and iOS Keychain to manage accounts of one user and share with other applications of the same vendor",
   "cordova": {
     "id": "cordova-plugin-kunder-accountmanager",
@@ -12,7 +12,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/capelaa10/cordova-plugin-kunder-accountmanager.git"
+    "url": "git+https://github.com/CapelaA10/cordova-plugin-kunder-accountmanager.git"
   },
   "keywords": [
     "cordova",
@@ -26,7 +26,7 @@
   "author": "Kunder",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/capelaa10/cordova-plugin-kunder-accountmanager/issues"
+    "url": "https://github.com/CapelaA10/cordova-plugin-kunder-accountmanager/issues"
   },
-  "homepage": "https://github.com/capelaa10/cordova-plugin-kunder-accountmanager#readme"
+  "homepage": "https://github.com/CapelaA10/cordova-plugin-kunder-accountmanager#readme"
 }
