@@ -15,11 +15,13 @@ npx cap sync
 - Start to put a drawable in android res folder with the name "acm_icon" so the plugin can identify what to use in the account manager section
 - Also create a string in the strings.xml file with the name "authLabel" this way the plugin knows the name of the app to show in AccountManager settings in android
 - Add this to the android manifest:
-"            
+
+```    
 <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"></uses-permission>
 <uses-permission android:name="android.permission.GET_ACCOUNTS"></uses-permission>
 <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
-"
+```
+
 - DO NOT FORGET TO ASK IN RUN TIME FOR THE USER PERMISSION
 
 ## iOS
@@ -27,9 +29,9 @@ npx cap sync
 
 ## In your TYPESCRIPT files
 - Add at the top of the file function name like:
-"declare var initWithKey: any;"  -> Replace initWithKey the function name you want to use 
+```declare var initWithKey: any;``` -> Replace initWithKey the function name you want to use 
 - Use the function in other parts for example:
-"
+```
 ngOnInit() {
     console.log("done test");
     initWithKey(
@@ -42,7 +44,7 @@ ngOnInit() {
         }
     );
 }
-"
+```
 
 
 ## Methods
